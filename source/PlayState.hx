@@ -1,5 +1,6 @@
 package;
 
+import flixel.ui.FlxButton;
 import flixel.FlxG;
 import lime.app.Application;
 import flixel.text.FlxText;
@@ -21,6 +22,8 @@ class PlayState extends FlxState
 
 	public var tick:Int = 0;
 
+	public var shopButton:FlxButton;
+
 	override public function create()
 	{
 		super.create();
@@ -29,6 +32,9 @@ class PlayState extends FlxState
 		setPlayerState(regular);
 		player.screenCenter();
 		add(player);
+
+		shopButton = new FlxButton(0,0, "Shop", () -> FlxG.switchState(() -> new Shop()));
+		add(shopButton);
 
 		versionText.alpha = 0.25;
 		add(versionText);
