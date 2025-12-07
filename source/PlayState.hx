@@ -3,7 +3,6 @@ package;
 import flixel.ui.FlxButton;
 import flixel.FlxG;
 import lime.app.Application;
-import flixel.text.FlxText;
 import flixel.FlxState;
 
 class PlayState extends FlxState
@@ -36,7 +35,7 @@ class PlayState extends FlxState
 
 		shopButton = new FlxButton(0,0, "Shop", () -> FlxG.switchState(() -> new Shop()));
 		add(shopButton);
-		
+
 		shopButton.screenCenter();
 		shopButton.y += shopButton.height;
 	}
