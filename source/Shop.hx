@@ -39,7 +39,7 @@ class Shop extends FlxState
 	{
 		super.update(elapsed);
 
-		PlayState.tick++;
-		FlxG.watch.addQuick('Tick', PlayState.tick);
+		PlayState.instance.tick++;
+		FlxG.watch.addQuick('Tick', PlayState.instance.tick);
 	}
 }

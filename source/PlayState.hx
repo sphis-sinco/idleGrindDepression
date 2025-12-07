@@ -17,23 +17,30 @@ class PlayState extends FlxState
 		trace("New player state: " + playerState);
 	}
 
-	public static var tick:Null<Int> = null;
+	public var tick:Int = 0;
 
 	public var shopButton:FlxButton;
+
+	public static var instance:PlayState;
 
 	override public function create()
 	{
 		super.create();
-		
-		if (tick == null)
-			tick = 0;
+
+		if (instance != null)
+		{
+			this.tick = instance.tick;
+			
+			instance = null;
+		}
+		instance = this;
 
 		player = new PixelSprite();
 		setPlayerState(regular);
 		player.screenCenter();
 		add(player);
 
-		shopButton = new FlxButton(0,0, "Shop", () -> FlxG.switchState(() -> new Shop()));
+		shopButton = new FlxButton(0, 0, "Shop", () -> FlxG.switchState(() -> new Shop()));
 		add(shopButton);
 
 		shopButton.screenCenter();
