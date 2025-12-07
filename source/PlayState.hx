@@ -16,6 +16,7 @@ class PlayState extends FlxState
 	{
 		player.loadGraphic('assets/images/player/' + state + '.png');
 		playerState = state;
+		trace("New player state: " + playerState);
 	}
 
 	override public function create()
