@@ -37,7 +37,7 @@ class PlayState extends FlxState
 		add(shopButton);
 
 		shopButton.screenCenter();
-		shopButton.y += shopButton.height;
+		shopButton.y += shopButton.height * 2;
 	}
 
 	override public function update(elapsed:Float)
