@@ -32,7 +32,7 @@ class Shop extends FlxState
 		add(backButton);
 
 		backButton.screenCenter();
-		backButton.y += backButton.height * 10;
+		backButton.y += backButton.height * 15;
 	}
 
 	override function update(elapsed:Float)
