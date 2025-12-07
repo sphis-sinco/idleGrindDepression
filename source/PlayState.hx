@@ -20,13 +20,16 @@ class PlayState extends FlxState
 		trace("New player state: " + playerState);
 	}
 
-	public var tick:Int = 0;
+	public static var tick:Null<Int> = null;
 
 	public var shopButton:FlxButton;
 
 	override public function create()
 	{
 		super.create();
+		
+		if (tick == null)
+			tick = 0;
 
 		player = new PixelSprite();
 		setPlayerState(regular);
