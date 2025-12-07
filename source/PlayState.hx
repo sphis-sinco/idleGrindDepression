@@ -23,7 +23,7 @@ class PlayState extends FlxState
 		super.create();
 
 		player = new FlxSprite();
-		setPlayerState('idle');
+		setPlayerState('regular');
 		player.screenCenter();
 		add(player);
 
