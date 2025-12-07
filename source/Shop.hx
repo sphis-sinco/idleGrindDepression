@@ -7,7 +7,7 @@ class Shop extends FlxState
 	public var keeper:PixelSprite;
 
 	public function setKeeperState(state:KeeperStates)
-		keeper.loadGraphic('assets/images/shop/' + state + '.png');
+		keeper.loadGraphic('assets/images/shop/keeper-' + state + '.png');
 
 	override function create()
 	{
