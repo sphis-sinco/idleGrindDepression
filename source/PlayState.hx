@@ -10,9 +10,9 @@ class PlayState extends FlxState
 	public var versionText:FlxText = new FlxText(2, 2, 0, Application.current.meta.get("version"), 8);
 
 	public var player:FlxSprite;
-	public var playerState:String;
+	public var playerState:PlayerStates;
 
-	public function setPlayerState(state:String):Void
+	public function setPlayerState(state:PlayerStates):Void
 	{
 		player.loadGraphic('assets/images/player/' + state + '.png');
 		playerState = state;
@@ -23,7 +23,7 @@ class PlayState extends FlxState
 		super.create();
 
 		player = new FlxSprite();
-		setPlayerState('regular');
+		setPlayerState(regular);
 		player.screenCenter();
 		add(player);
 
