@@ -18,6 +18,7 @@ class PlayState extends FlxState
 	}
 
 	public var tick:Int = 0;
+	public var money:Int = 10;
 
 	public var shopButton:FlxButton;
 
@@ -30,7 +31,8 @@ class PlayState extends FlxState
 		if (instance != null)
 		{
 			this.tick = instance.tick;
-			
+			this.money = instance.money;
+
 			instance = null;
 		}
 		instance = this;
