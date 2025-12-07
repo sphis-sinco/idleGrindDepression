@@ -21,6 +21,7 @@ class Shop extends FlxState
 
 		desk = new PixelSprite();
 		add(desk);
+		desk.loadGraphic('assets/images/shop/desk.png');
 
 		desk.screenCenter();
 	}
