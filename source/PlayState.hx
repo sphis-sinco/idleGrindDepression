@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxG;
 import lime.app.Application;
 import flixel.text.FlxText;
 import flixel.FlxState;
@@ -18,6 +19,8 @@ class PlayState extends FlxState
 		trace("New player state: " + playerState);
 	}
 
+	public var tick:Int = 0;
+
 	override public function create()
 	{
 		super.create();
@@ -34,5 +37,8 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
+		tick++;
+		FlxG.watch.addQuick('Tick', tick);
 	}
 }
